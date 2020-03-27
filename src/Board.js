@@ -159,21 +159,20 @@ Minor Diagonals run diagonally, top-right to bottom-left
         }
         for(var i=1; i < this.rows().length; i++) {
           this.rows().shift()
-         has(0) 3aslema 
+         has(0) 
                 
          */
            
-
+// hhhey u there 
     hasMajorDiagonalConflictAt: function(idx) {
       var one = 0;
      for(var i = 0; i < this.rows().length; i++){
-        for (var j  = 0; j < this.rows().length; j++){
-          
-          if(this.rows()[i][j]===1 &&this._getFirstRowColumnIndexForMajorDiagonalOn(i,j)=== idx) {
-            one+=1;
+        for (var j  = 0; j < this.rows().length; j++) {              
+          if ((this.rows()[i][j] === 1) && (this._getFirstRowColumnIndexForMajorDiagonalOn(i,j) === idx)) {
+            one+=1; 
             if(one>=2) {
               return true;
-             }
+            }
           }     
         }
       }
@@ -181,6 +180,8 @@ Minor Diagonals run diagonally, top-right to bottom-left
     },
 
     // test if any major diagonals on this board contain conflicts
+
+
     hasAnyMajorDiagonalConflicts: function() {
      for(var i = 0; i < this.rows().length; i++) {
        for(var j = 0; j < this.rows().length; j++) {
